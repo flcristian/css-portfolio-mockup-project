@@ -1,0 +1,158 @@
+*{
+    font-family: 'Merriweather', serif;
+}
+
+h1, h2, h3, p{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+ul, li{
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+    margin: 0;
+    font-weight: 600;
+}
+
+ul{
+    padding-left: 20px;
+}
+
+hr{
+    width: 100%;
+    opacity: 50%;
+}
+
+.body-container{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/* INFO */
+
+.info-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 30px 50px 50px 50px;
+    background-color: #121214;
+}
+
+.info-image{
+    border: 5px solid white;
+    width: min(300px, 95%);
+    max-width: 95%;
+}
+
+.info-title{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+.info-text{
+    text-align: center;
+    color: grey;
+}
+
+.info-link{
+    font-weight: 900;
+    color: rgb(54, 54, 54);
+}
+
+/* MAIN CONTAINER */
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+
+.back-button{
+    display: inline-block;
+    width: 100px;
+    margin: 20px;
+}
+
+.header-container{
+    padding: 30px;
+    display: grid;
+}
+
+.text-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.technologies-container{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.technologies-button {
+    width: 100%;
+    padding: 7px 0 7px 0;
+    text-align: center;
+    background-color: #333333;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}
+
+/* ARTICLE CONTAINER */
+
+.article-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    gap: 15px;
+}
+
+.image-article{ 
+    border: 2px solid #cccccc;
+    padding: 3px;
+    max-width: calc(100% - 10px);
+}
+
+/* RESPONSIVENESS */
+
+@media (min-width: 920px){
+    .body-container{
+        grid-template-columns: 1fr 3fr;
+    }
+
+    .info-container{
+        position: sticky;
+        height: 100%;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .info-text{
+        text-align: start;
+    }
+
+    .header-container{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    .technologies-container{
+        margin: 0;
+        align-items: flex-start;
+    }
+}
